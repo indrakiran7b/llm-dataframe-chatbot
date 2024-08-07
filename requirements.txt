@@ -1,0 +1,13 @@
+ollama
+langchain
+langchain-community
+langchain-experimental
+langchain-ollama
+pandas
+openpyxl
+tabulate
+streamlit
+numpy
+scikit-learn
+
+-e .

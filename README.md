@@ -24,7 +24,7 @@ DataChat is an interactive web application that lets you analyze and explore you
 2.  **Installation:**
 
     ```bash
-    git clone [(https://github.com/WizKnight/DataChat)]
+    git clone [https://github.com/WizKnight/DataChat]
     cd DataChat
     pip install -r requirements.txt
     ```
@@ -32,7 +32,7 @@ DataChat is an interactive web application that lets you analyze and explore you
 3.  **Running the App:**
 
     ```bash
-    streamlit run main.py
+    streamlit run src/main.py
     ```
 
     This will open DataChat in your web browser.

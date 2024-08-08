@@ -1,7 +1,5 @@
-# DataChat
-DataChat is an interactive web application that lets you analyze and explore your datasets using natural language. Simply upload your CSV or Excel file, and start asking questions about your data in plain English. DataChat leverages the power of Ollama (gemma:2b) for language understanding and LangChain for seamless integration with data analysis tools.
-
 # DataChat: Conversational Data Analysis with Ollama
+DataChat is an interactive web application that lets you analyze and explore your datasets using natural language. Simply upload your CSV or Excel file, and start asking questions about your data in plain English. DataChat leverages the power of Ollama (gemma:2b) for language understanding and LangChain for seamless integration with data analysis tools.
 
 [![Ollama](https://img.shields.io/badge/Ollama-gemma%3A2b-blueviolet)](https://ollama.ai/)
 [![LangChain](https://img.shields.io/badge/LangChain-latest-blue)](https://python.langchain.com/)

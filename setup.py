@@ -1,27 +1,30 @@
-from setuptools import find_packages,setup
-from typing import List
+from setuptools import setup, find_packages
+from pathlib import Path
 
-HYPEN_E_DOT = '-e .'
-def get_requirements(file_path:str)->List[str]:
-    '''
-    this function will return the list of requirements
-    '''
-    requirements=[]
-    with open(file_path) as file_obj:
-        requirements=file_obj.readlines()
-        requirements=[req.replace("\n","") for req in requirements]
-
-        if HYPEN_E_DOT in requirements:
-            requirements.remove(HYPEN_E_DOT)
-    
-    return requirements
+def load_requirements(filename: str = "requirements.txt"):
+    """Load dependencies from a requirements file."""
+    path = Path(__file__).parent / filename
+    if not path.exists():
+        return []
+    with open(path) as f:
+        return [
+            line.strip() for line in f
+            if line.strip() and not line.startswith("#") and line.strip() != "-e ."
+        ]
 
 setup(
-name='DataChat',
-version='0.0.1',
-author='Swapnil Jikar',
-author_email='sjikar65@gmail.com',
-packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
-
+    name="datachat",
+    version="0.1.0",
+    description="An interactive Streamlit + LLM powered data exploration chatbot.",
+    packages=find_packages(exclude=("tests", "docs")),
+    install_requires=load_requirements(),
+    python_requires=">=3.9",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Framework :: Streamlit",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    include_package_data=True,
+    zip_safe=False,
 )

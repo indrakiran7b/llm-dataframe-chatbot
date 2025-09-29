@@ -28,58 +28,27 @@ Upload your dataset, ask natural-language questions, and get instant **answers, 
 ```bash
 git clone https://github.com/YOUR_USERNAME/llm-dataframe-chatbot.git
 cd llm-dataframe-chatbot
-2. Create a virtual environment
-bash
-Copy code
-python -m venv .venv
-# On Linux/Mac
-source .venv/bin/activate
-# On Windows
-.venv\Scripts\activate
-3. Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-4. Install & run Ollama
-Download Ollama: 👉 https://ollama.ai
 
-Start the Ollama server:
+## 2. Create a virtual environment
+  python -m venv .venv
+  # On Linux/Mac
+  source .venv/bin/activate
+  # On Windows
+  .venv\Scripts\activate
 
-bash
-Copy code
-ollama serve
-Pull the model you want (default: gemma2:2b):
+## 3. Install dependencies
+  pip install -r requirements.txt
 
-bash
-Copy code
-ollama pull gemma2:2b
-▶️ Run the app
-Launch Streamlit:
-
-bash
-Copy code
-streamlit run src/main.py
+## 4. Install & run Ollama
+  Download Ollama 👉 https://ollama.ai
+  ### Start the Ollama server:
+    ollama serve
+  ### Pull the model you want (default: gemma2:2b):
+    ollama pull gemma2:2b
+##▶️ Run the app
+  ### Launch Streamlit:
+    streamlit run src/main.py
 Open your browser: http://localhost:8501
 
-💡 Example Queries
-Once you upload a dataset, try:
 
-Total revenue for region = 'north'
 
-Top 5 products by total revenue
-
-Average qty per region
-
-Bar chart of total revenue by product
-
-Line chart: daily revenue trend
-
-📂 Project Structure
-bash
-Copy code
-llm-dataframe-chatbot/
-│── src/                 # Streamlit app code
-│   └── main.py
-│── requirements.txt     # Python dependencies
-│── setup.py             # Packaging setup
-│── README.md            # Project documentation
